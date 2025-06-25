@@ -36,3 +36,11 @@ cacheSolve <- function(x, ...) {
   x$setInverse(inv)
   inv
 }
+
+find_inverse <- function(a) {
+  my_matrix <- a
+  cached_matrix <- makeCacheMatrix(my_matrix)
+  inverse_matrix <- cacheSolve(cached_matrix)
+  print(inverse_matrix)
+}
+
